@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* I faced a small error in div aligning and dat caused me 3 4 days always checking div and open and closing tags */
+
+}
+body{
+    font-size: 10px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 10px 20px;
+    margin-bottom: 30px;  
+}
+
+a{
+    text-decoration: none;
+    color:purple;
+    /* font-size: 18px; */
+}
+.cart
+{
+    /* code  */
+    /* position: relative; */
+    background-color: white;
+    color:black;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.cartAmount{
+    position: absolute;
+    /* we can also use -14px to push it upwards  */
+    /* u can do top-14px right-14px etc */
+    top:0;
+    right:15px;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+
+/* Shop div css */
+.shop{
+    display: grid;
+    /* 4 means 4 cols and all cols shud have 223 px width */
+    grid-template-columns: repeat(4, 150px);
+    gap: 40px;
+    justify-content: center; 
+    font-size: 18px;
+}
+
+@media (max-width:1000px){
+    .shop{
+/* tne moment the  screen hits 1000px i want 2cols with one fifty pxs
+below 1000px well get 2 cols */
+        grid-template-columns: repeat(2, 150px);
+    }
+}
+
+@media (max-width:500px){
+    .shop{
+/* tne moment the  screen hits 500px i want 1cols with one fifty pxs
+below 1000px well get 2 cols */
+        grid-template-columns: repeat(1, 150px);
+    }
+}
+
+
+.item
+{
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.details{
+    display: flex;
+flex-direction:column;
+gap: 10px;
+
+}
+
+.price-quantity{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   
+
+   /*ac items works from y axis and jcsp works from x axis  */
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    
+   
+}
+
+.bi-plus-lg{
+    font-size: 1rem;
+    color:green;
+    /* to make minus  icon red */
+}
+
+.bi-dash{
+    font-size: 1rem;
+    color: red;
+    /* to make plus icon gray */
+}
+
+.cart-quantity{
+    font-size: 1.1rem;
+}
+.text-center
+{text-align: center;
+margin-bottom: 20px;
+}
+
+.homeBtn, .checkout, .removeAll{
+    background-color:#212529;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.checkout{
+    background-color: green;
+}
+
+.removeAll{
+    background-color: red;
+}
+
+
+.bi-x-lg{
+    color: red;
+
+    font-weight:bold;
+}
+
+
+/* shopping cart */
+.shoppingCart{
+    /*  to display all in a line we used display grid */
+    display: grid;
+    grid-template-columns: repeat(1,320px);
+justify-content: center;
+/*  to move to center */
+gap: 15px;
+    
+}
+
+.cart-item{
+    /*  used to align items  in line  like imgs price etc */
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+}
+
+.title-price-x{
+    width: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    /* border: 1px solid red; */
+}
+
+.title-price{
+    display: flex;
+    align-items: center;
+gap: 10px;
+
+}
+
+.cart-item-price{
+    background-color: #212529;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    /* 3px top and bottom and 6px on left and ryt */
+}
+
+.information{
+
+    display: grid;
+    grid-template-columns: repeat(5,120px);
+ justify-content: center;
+ font-size: 1.1rem;
+ gap: 20px;
+ margin-top: 20px;
+ background-color: #212529;
+ color: white ;
+ padding: 4% 4% ;
+}
+.copyright{
+    background-color:  #212529;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;    
+}
